@@ -1,7 +1,6 @@
 import sys
 import json
 import yaml
-import string
 
 FOUND=[]
 TAB_COUNTER=0
@@ -44,7 +43,7 @@ def _query_key(d, phrase, instances=FOUND):
         if type(key)==list:
             [_query_key(i, phrase, instances) for i in key if type(i)==dict]
 
-def _query_structure(d, phrase, instances=FOUND, tc=TAB_COUNTER):
+def _query_structure(d, phrase, instances=FOUND):
     for key, value in d.items():
         if phrase in [value, str(value), key, str(key)]:
             print(f"\033[1;92m{key}: {value}\033[00m")
@@ -84,11 +83,18 @@ def _open_yaml(f):
             opened=yaml.safe_load(file)
             return opened
         except yaml.YAMLError:
-            print("ERROR: Raised when loading file: ", f)
+            print("ERROR: Raised when loading configuration file: ", f)
 
 # LVL 3
 # JSON
-# def _open_json(f):
+def _open_json(f):
+    with open(f, "r") as file:
+        try:
+            opened=json.load(file)
+            return opened
+        except ValueError as err:
+            print("ERROR: Raised when loading configuration file: ", file)
+            print(err)
 
 # LVL 2
 def _open_file(file_path):
@@ -99,7 +105,7 @@ def _open_file(file_path):
     elif file_path.endswith("}"):
         return json.loads(file_path)
     else:
-        raise("ERROR: Cannot parse {}".format(peek_arg))
+        print("ERROR: Cannot parse {}".format(peek_arg))
 
 # LVL 2
 # CHECKING INPUT VARIABLES
@@ -113,12 +119,12 @@ def _check_display_arg(arg):
     elif arg in ["struct", "Struct", "STRUCT", "structure", "Structure", "STRUCTURE"]:
         return "structure"
     else:
-        raise("ERROR: Incorrect value for ", arg)
+        print("ERROR: Incorrect value for ", arg)
 
 # LVL 1
 # *CALLABLE* SEARCH BAR 
     #file-path/dict
-    #d2esired word
+    #desired word
     #<default: both> type of return value
     #<default: off> turns on/off printing to console
 def search(f: dict, x: str, get="both", print="off"):
@@ -132,7 +138,7 @@ if __name__ == '__main__':
     print_results='on'
     num_args = len(sys.argv) # getting the number of args passed
     if num_args > 4 or num_args < 3: # checks for incorrect arg amount
-        raise("ERROR: Call `search` with 2 or 3 arguments")
+        print("ERROR: Call `search` with 2 or 3 arguments")
     
     peek_arg=sys.argv[1] # accessing file-path/dictionary to be parsed
     find_arg=sys.argv[2] # accessing desired word to be found
