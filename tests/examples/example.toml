@@ -1,0 +1,115 @@
+[metadata]
+  name = "test"
+
+  [metadata.labels]
+    app = "example"
+    environment = "dev"
+
+  [metadata.annotations]
+    version = "1.0"
+
+[spec]
+  replicas = 5
+
+  [spec.selector]
+    [spec.selector.matchLabels]
+      app = "example"
+
+  [spec.template]
+    [spec.template.metadata]
+      [spec.template.metadata.labels]
+        app = "example"
+
+    [spec.template.spec]
+      [[spec.template.spec.containers]]
+        name = "web"
+        image = "nginx"
+
+        [spec.template.spec.containers.ports]
+          containerPort = 80
+
+        [[spec.template.spec.containers.env]]
+          name = "ENV_VAR1"
+          value = "value1"
+
+        [[spec.template.spec.containers.env]]
+          name = "ENV_VAR2"
+          value = "value2"
+
+        [[spec.template.spec.containers.volumeMounts]]
+          name = "data"
+          mountPath = "/data"
+
+        [[spec.template.spec.containers.volumeMounts]]
+          name = "config"
+          mountPath = "/config"
+
+      [[spec.template.spec.initContainers]]
+        name = "init"
+        image = "busybox"
+        command = ['sh', '-c', 'echo "Initializing..."']
+
+        [[spec.template.spec.initContainers.volumeMounts]]
+          name = "data"
+          mountPath = "/data"
+
+      [[spec.template.spec.initContainers]]
+        name = "init2"
+        image = "busybox"
+        command = ['sh', '-c', 'echo "Initializing 2..."']
+
+        [[spec.template.spec.initContainers.volumeMounts]]
+          name = "data"
+          mountPath = "/data2"
+
+      [[spec.template.spec.volumes]]
+        name = "data"
+        [spec.template.spec.volumes.emptyDir]
+
+      [[spec.template.spec.volumes]]
+        name = "config"
+        [spec.template.spec.volumes.configMap]
+          name = "example-config"
+
+      [[spec.template.spec.volumes]]
+        name = "secrets"
+        [spec.template.spec.volumes.secret]
+          secretName = "example-secrets"
+
+      [spec.template.spec.imagePullSecrets]
+        [[spec.template.spec.imagePullSecrets.name]]
+          name = "my-secret"
+
+      [spec.template.spec.securityContext]
+        runAsUser = 1000
+
+      restartPolicy = "Always"
+
+  [spec.strategy]
+    type = "RollingUpdate"
+
+    [spec.strategy.rollingUpdate]
+      maxUnavailable = 1
+      maxSurge = 1
+
+[status]
+  replicas = 5
+  readyReplicas = 5
+  updatedReplicas = 5
+  availableReplicas = 5
+
+  [[status.conditions]]
+    type = "Available"
+    status = "True"
+    lastUpdateTime = "2023-02-24T00:00:00Z"
+    lastTransitionTime = "2023-02-24T00:00:00Z"
+    reason = "Kubernetes version upgrade"
+    message = "The deployment is available after a Kubernetes version upgrade."
+
+  [[status.conditions]]
+    type = "Progressing"
+    status = "True"
+    lastUpdateTime = "2023-02-24T00:00:00Z"
+    lastTransitionTime = "2023-02-24T00:00:00Z"
+    reason = "New ReplicaSet available"
+    message = "A new ReplicaSet was created to scale up the deployment."

@@ -13,19 +13,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">Reviving OSS Documentation</h2>
+  <h2 align="center">DataGrep - A Markdown Language Parser</h2>
 
   <p align="center">
     Created by: Michael Montanaro
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/montymi/DataGrep"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/montymi/ClearDocs">View Demo</a>
+    <a href="https://github.com/montymi/DataGrep">View Demo</a>
     ·
-    <a href="https://github.com/montymi/ClearDocs/issues">Report Bug</a>
+    <a href="https://github.com/montymi/DataGrep/issues">Report Bug</a>
     ·
-    <a href="https://github.com/montymi/ClearDocs/issues">Request Feature</a>
+    <a href="https://github.com/montymi/DataGrep/issues">Request Feature</a>
   </p>
 </div>
 
@@ -35,12 +35,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#structure">Structure</a></li>
@@ -53,171 +48,26 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## Problem Statement
-
-Open-source software has a high barrier of entry due to source code disorganization, caused mainly by a lack of structured documentation. For this project, I will create a brief GitHub README file to depict an ideal version of the file and argue that the current state of OSS's documentation is not acceptable. OSS documentation must find a method of tracking and portraying project information that is universally accepted within the open-source community. 
-
 ## About The Project
 
-The Open Source Software (OSS) community is the backbone of countless businesses around the world, with more than 50% of Fortune 500 companies relying on it for their workflow. That number is set to grow as more open source projects advance and gain traction in the work force, but this will only happen with consistent feature implementation. Increased demand in new features is difficult to match without a subsequent increase in developers. In a study done by Ravi Sen, Siddhartha S. Singh, and Sharad Borle, it was found that "an increase in the number of developers by 10 leads to a 5.65% increase in the average number of subscribers." As evidenced by this statistic, there is a direct correlation between the number of workers on a project and the number of users/subscribers to the service that is being created. 
-
-This would lead one to believe that the OSS community should be doing everything in its power to lower the projects barrier of entry and welcome edits and suggestions from the community, which is the main goal of OSS. However, not only is this not currently a priority, but also, structural documentation is usually still omitted altogether, with only 5.4% of 2000 projects investigated in a 2014 study having any sort of architectural documentation. Many open source projects have already grown by enormous proportions, but it is not difficult to say that if a higher percentage of projets were to put an emphasis on software architecture documentation, the community and countless other lesser-known projects would thrive. 
-
-Documentation must serve to guide a user or possible developer through the project's intended use case as well as the current workflow and future plans. It isn't enough to simply have a brief explanation of the project and an installation guide with a few use case examples. Outside developers must be able to quickly navigate the source code and pick up on the tasks that are waiting to be completed. Users should have a sense of the future plans for the project as well as a clear means of communicating with the current developers. 
-
-This README hopes to serve as a template for what documentation should look like in order to greatly improve the approachability of OSS projects and encourage more contributions from the community and any newcomer trying to grow as a programmer. 
+DataGrep is a Python package that provides a grep-like interface within your python script to more efficiently parse various markdown languages such as yaml, json, and dictionaries. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-By listing the major libraries used in the project, the project will show up in filtered search results for any library listed. The list also allows a developer to quickly see if a library in which they are well-versed is a part of the project. Check the "Mardown Links and Images" section of the HTML version of this file to see how these logo-url's are created.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-*Here is an example of installation instructions by one of the largest Python projects on GitHub: [cpython](https://github.com/python/cpython). This section should walk through installation on various operating systems as well as any installation options. The readability of this section will make or break whether someone will use the project, since this section is often the most looked at section (only behind the [About the Project](#about-the-project) section).*
-
-On Unix, Linux, BSD, macOS, and Cygwin:
-
-```
-./configure
-make
-make test
-sudo make install
-```
-This will install Python as python3.
-
-You can pass many options to the configure script; run ./configure --help to find out more. On macOS case-insensitive file systems and on Cygwin, the executable is called python.exe; elsewhere it's just python.
-
-Building a complete Python installation requires the use of various additional third-party libraries, depending on your build platform and configure options. Not all standard library modules are buildable or useable on all platforms. Refer to the Install dependencies section of the Developer Guide for current detailed information on dependencies for various Linux distributions and macOS.
-
-On macOS, there are additional configure and build options related to macOS framework and universal builds. Refer to Mac/README.rst.
-
-On Windows, see PCbuild/readme.txt.
-
-If you wish, you can create a subdirectory and invoke configure from there. For example:
-
-```
-mkdir debug
-cd debug
-../configure --with-pydebug
-make
-make test
-```
-(This will fail if you also built at the top-level directory. You should do a make clean at the top-level first.)
+### Installation
+Simply run `pip install datagrep`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Users are much more likely to use and test a project if they can quickly determine how best to use the software and whether or not it really is what they are looking for. Clear usage examples also give incoming developers a chance to better understand the code and its intended use.
-
-*Here is an example from a project for getting the weather via CLI by [genuinetools](https://github.com/genuinetools)*
-
+Import the module at the top of your python script
 ```
-# get the current weather in your current location
-$ weather
-
-# change the units to metric
-$ weather -l "Paris, France" -u si
-
-# it will auto guess the units though so changing
-# the location to paris will change the units to `si`
-$ weather -l "Paris, France"
-
-# get three days forecast for NY
-$ weather -l 10028 -d 3
-
-# or you can autolocate and get three days forecast
-$ weather -d 3
-
-# get the weather in Manhattan Beach, CA
-# even includes alerts
-$ weather -l "Manhattan Beach, CA"
-#                             .;odc
-#                           ;kXNNNO
-#                         .0NNO0NN:
-#                        'XNK; dNNl
-#                        KNX'  'XNK.
-#                       ,NNk    cXNK,
-#                       ,NNk     '0NNO:.
-#                     .'cXNXl;,.   ,xXNNKOxxxk0Xx
-#                 'lOXNNNNNNNNNNXOo'  ':oxkOXNNXc
-#               cKNNKd:'.    ..;d0NNKl    ,xXNK,
-#        .;:cclKNXd.              .oXNXxOXNNXl
-#    .cOXNNNNNNNO.                  .kNNNNNNNXOc.
-#   lXNXx;.    .                      .    .;dXNXo
-#  ONNd.                                       oXN0.
-# dNNo                                          cNNk
-# XNN.                                           NNX
-# 0NN'                                          .NNK
-# ;XN0.                                        .ONNc
-#  ;XNXo.                                    .lXNX:
-#   .oXNX0dlcclx0Xo.              .oXKxlccldOXNXd.
-#      ,lk0KXXK0xKNN0o;..    ..;o0NNKx0KXXX0ko,
-#                 'lOXNNNNNNNNNNXOo,
-#                     :x0XNNX0x:.
-#
-#
-# Current weather is Partly Cloudy in Manhattan Beach in California for July 14 at 4:14am EDT
-# The temperature is 69.2°F, but it feels like 69.2°F
-#
-# Special Weather Statement for Los Angeles, CA
-# ...THREAT OF MONSOONAL THUNDERSTORMS LATE TONIGHT THROUGH WEDNESDAY...
-# A STRONG UPPER LEVEL HIGH PRESSURE SYSTEM CURRENTLY CENTERED OVER NEVADA
-# WILL BRING INCREASING EAST TO SOUTHEAST FLOW OVER SOUTHERN
-# CALIFORNIA. AS A RESULT...A SIGNIFICANT SURGE OF MONSOONAL MOISTURE
-# WILL MOVE INTO SOUTHWEST CALIFORNIA LATE TONIGHT THROUGH WEDNESDAY.
-# THE GREATEST THREAT OF SHOWERS AND THUNDERSTORMS WILL BE ACROSS THE
-# MOUNTAINS AND ANTELOPE VALLEY LATE TONIGHT INTO TUESDAY. DUE TO THE
-# EASTERLY UPPER LEVEL FLOW ON MONDAY...THERE WILL ALSO BE A SLIGHT
-# CHANCE OF SHOWERS AND THUNDERSTORMS ACROSS MOST COASTAL AND VALLEY
-# AREAS.
-# THE DEEPER MONSOONAL MOISTURE WILL BRING THE POTENTIAL FOR BRIEF HEAVY
-# RAINFALL WITH STORMS THAT DEVELOP ON MONDAY AND TUESDAY...ESPECIALLY
-# ACROSS THE MOUNTAINS AND ANTELOPE VALLEY. WHILE STORMS ARE EXPECTED
-# TO BE FAST MOVING...THERE WILL BE THE POTENTIAL FOR LOCALIZED FLOODING
-# OF ROADWAYS AND ARROYOS. ON TUESDAY...THE THREAT OF THUNDERSTORMS IS
-# EXPECTED TO REMAIN CONFINED TO THE MOUNTAINS AND DESERTS. WITH WEAKER
-# UPPER LEVEL WINDS ON TUESDAY...STORMS WILL LIKELY MOVE SLOWER. AS A
-# RESULT...THERE WILL BE AN INCREASED THREAT OF FLASH FLOODING.
-# IT WILL NOT BE AS HOT ACROSS MUCH OF THE REGION TOMORROW DUE TO THE
-# INCREASED MOISTURE AND CLOUD COVERAGE...WITH INTERIOR SECTIONS
-# GENERALLY REMAINING IN THE 90S. HOWEVER...THERE WILL BE A
-# SIGNIFICANT INCREASE IN HUMIDITY ON MONDAY THAT WILL CONTINUE TO
-# BRING DISCOMFORT.
-# ANYONE PLANNING OUTDOOR ACTIVITIES IN THE MOUNTAINS AND DESERTS
-# DURING THE NEXT FEW DAYS SHOULD CAREFULLY MONITOR THE LATEST
-# NATIONAL WEATHER SERVICE FORECASTS AND STATEMENTS DUE TO THE
-# POTENTIAL HAZARDS ASSOCIATED WITH THUNDERSTORMS.
-#             Created: July 13 at 10:50pm EDT
-#             Expires: July 14 at 7:00pm EDT
-#
-# Ick! The humidity is 85%
-# The nearest storm is 18 miles NE away
-# The wind speed is 3.96 mph SE
-# The cloud coverage is 35%
-# The visibility is 9.58 miles
-# The pressure is 1012.99 mbar
+import datagrep
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -246,7 +96,7 @@ By publicly displaying the to-do list of the project, users are able to see any 
 - [ ] Add beginner project to repository
 - [ ] Change code examples to be example project
 
-See the [open issues](https://github.com/montymi/ClearDocs/issues) for a full list of issues and proposed features.
+See the [open issues](https://github.com/montymi/DataGrep/issues) for a full list of issues and proposed features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -283,7 +133,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Michael Montanaro - [LinkedIn](https://www.linkedin.com/in/michael-montanaro/) - montanaro.m@northeastern.edu
 
-Project Link: [https://github.com/montymi/ClearDocs](https://github.com/montymi/ClearDocs)
+Project Link: [https://github.com/montymi/DataGrep](https://github.com/montymi/DataGrep)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -307,16 +157,16 @@ Use this space to list any resources used or that may be helpful in understandin
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/montymi/ClearDocs.svg?style=for-the-badge
-[contributors-url]: https://github.com/montymi/ClearDocs/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/montymi/ClearDocs.svg?style=for-the-badge
-[forks-url]: https://github.com/montymi/ClearDocs/network/members
-[stars-shield]: https://img.shields.io/github/stars/montymi/ClearDocs.svg?style=for-the-badge
-[stars-url]: https://github.com/montymi/ClearDocs/stargazers
-[issues-shield]: https://img.shields.io/github/issues/montymi/ClearDocs.svg?style=for-the-badge
-[issues-url]: https://github.com/montymi/ClearDocs/issues
-[license-shield]: https://img.shields.io/github/license/montymi/ClearDocs.svg?style=for-the-badge
-[license-url]: https://github.com/montymi/ClearDocs/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/montymi/DataGrep.svg?style=for-the-badge
+[contributors-url]: https://github.com/montymi/DataGrep/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/montymi/DataGrep.svg?style=for-the-badge
+[forks-url]: https://github.com/montymi/DataGrep/network/members
+[stars-shield]: https://img.shields.io/github/stars/montymi/DataGrep.svg?style=for-the-badge
+[stars-url]: https://github.com/montymi/DataGrep/stargazers
+[issues-shield]: https://img.shields.io/github/issues/montymi/DataGrep.svg?style=for-the-badge
+[issues-url]: https://github.com/montymi/DataGrep/issues
+[license-shield]: https://img.shields.io/github/license/montymi/DataGrep.svg?style=for-the-badge
+[license-url]: https://github.com/montymi/DataGrep/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michael-montanaro
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white

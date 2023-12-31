@@ -1,0 +1,4 @@
+# config.toml
+
+[settings]
+print = true

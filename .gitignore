@@ -1,2 +1,23 @@
-*~
-__pycache__
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Local configuration file (e.g., for IDEs or editors)
+.idea/
+.vscode/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution directories
+dist/
+build/
+
+# Python egg metadata
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+

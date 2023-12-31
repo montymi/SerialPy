@@ -1,0 +1,32 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SerialPy"
+version = "1.0.0"
+description = "A tool for working with serialized data"
+readme = "README.md"
+authors = [{ name = "Michael Montanaro", email = "mcmontanaro01@gmail.com" }]
+license = { file = "LICENSE.txt" }
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["serialization", "yaml", "json", "toml", "dictionary", "search", "replace", "serial", "data", "OpenAPI", "API", "api", "Config", "Configuration"]
+dependencies = [
+    "PyYAML >=5.0",
+]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/montymi/serialpy"
+
+[project.scripts]
+serialpy = "serialpy.__main__:main"
