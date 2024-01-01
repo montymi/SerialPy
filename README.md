@@ -50,7 +50,7 @@
 
 *SerialPy* is a versatile Python package designed to streamline search and replace operations on serial data. This powerful tool is crafted to enhance workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. Whether you are working through the command line or integrating it into your Python projects, serialpy simplifies the process of finding and replacing specific patterns within your data. 
 
-Its key features include efficient `search` and `replace` functionality, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
+Its key features include efficient `search` and `replace` functionalities, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,8 +62,9 @@ Its key features include efficient `search` and `replace` functionality, allowin
 ### Installation
 
 Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi using:
-
-`pip install -i https://test.pypi.org/simple/ SerialPy`
+```
+pip install -i https://test.pypi.org/simple/ SerialPy
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
