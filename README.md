@@ -83,7 +83,9 @@ serialpy replace path/to/file "test" "replaced"
 
 ### Library
 Import the module at the top of your python script.
+
 The following snippet of code checks all values from "path/to/file" for "5" and returns all keys associated with the found values. 
+
 The next line checks to see if the replace function successfully replaced all instances of "5" in "path/to/file" with "6".
 ```
 from serialpy import search, replace
@@ -103,7 +105,7 @@ if (replace.all("path/to/file", "5", "6"):
 - [X] Add `replace` feature
 - [X] Add support for `.toml` 
 - [X] Update README.md
-- [ ] Update to OOD architecture, with `search` and `replace` contained within a `Cereal` object that stores serial data
+- [ ] Update to OOD architecture, with features contained within `Cereal` object that stores serial data
 - [ ] Add support for multiple documents at once
 - [ ] Add project parser to automatically insert supported file types
 
@@ -129,7 +131,7 @@ See the [open issues](https://github.com/montymi/SerialPy/issues) for a full lis
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.txt`](./License.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
