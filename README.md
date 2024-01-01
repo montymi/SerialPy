@@ -48,7 +48,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-*SerialPy* is a Python package designed to streamline search and replace operations on common data formats: [yaml](https://yaml.org/), [toml](https://toml.io/en/), and [json](https://www.json.org/json-en.html). 
+*SerialPy* is a Python package designed to streamline search and replace operations on data formats: <a style="text-decoration:none" href='https://yaml.org'>yaml</a>, <a style="text-decoration:none" href="https://toml.io/en/">toml</a>, and <a style="text-decoration:none" href="https://www.json.org/json-en.html">json</a>. 
 Built to use with additional shell scripting to semi-automate workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. 
 Features include `search` and `replace`, allowing for precise control of serial data. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
