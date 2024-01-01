@@ -5,7 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![GNU License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -88,7 +88,9 @@ serialpy replace path/to/file "var1" "var2"
 
 ### Library
 Import the module at the top of your python script.
+
 The following snippet of code checks all values from "path/to/file" for "5" and returns all keys associated with the found values. 
+
 The next line checks to see if the replace function successfully replaced all instances of "5" in "path/to/file" with "6".
 ```
 from serialpy import search, replace
@@ -134,7 +136,7 @@ See the [open issues](https://github.com/montymi/SerialPy/issues) for a full lis
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.txt`](https://github.com/montymi/SerialPy/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
