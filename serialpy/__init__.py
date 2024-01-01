@@ -3,8 +3,8 @@
 from importlib import resources
 import tomllib
 
-# Version of the serial-search package
-__version__ = "1.0.0"
+# Version of the serialpy package
+__version__ = "1.0.1"
 
 # Read settings from config file
 _cfg = tomllib.loads(resources.read_text("serialpy", "config.toml"))
