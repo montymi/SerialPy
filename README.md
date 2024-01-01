@@ -48,9 +48,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-*SerialPy* is a versatile Python package designed to streamline search and replace operations on serial data. This powerful tool is crafted to enhance workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. Whether you are working through the command line or integrating it into your Python projects, serialpy simplifies the process of finding and replacing specific patterns within your data. 
+*SerialPy* is a Python package designed to streamline search and replace operations on common data formats: [yaml](https://yaml.org/), [toml](https://toml.io/en/), and [json](https://www.json.org/json-en.html). 
+Built to use with additional shell scripting to semi-automate workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. 
+Whether you are working through the command line or integrating it into your Python projects, *Serialpy* simplifies the process of finding and replacing specific patterns within your data. 
 
-Its key features include efficient `search` and `replace` functionality, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
+Features include `search` and `replace`, allowing for precise control of serial data. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,7 +63,10 @@ Its key features include efficient `search` and `replace` functionality, allowin
 
 ### Installation
 
-Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi using `pip install -i https://test.pypi.org/simple/ SerialPy`
+Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi: 
+```
+pip install -i https://test.pypi.org/simple/ SerialPy
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,9 +81,9 @@ Search for any key within the data in the given file path that is "test" and ret
 ```
 serialpy search path/to/file "test" --find="key" --ret="value"
 ```
-Replace any instance of "test" from the data in the given file path to "replaced" and return True if successfully written back to the file.
+Replace any instance of "var1" from the data in the given file path to "var2" and return True if successfully written back to the file.
 ```
-serialpy replace path/to/file "test" "replaced"
+serialpy replace path/to/file "var1" "var2"
 ```
 
 ### Library
@@ -103,7 +108,7 @@ if (replace.all("path/to/file", "5", "6"):
 - [X] Add `replace` feature
 - [X] Add support for `.toml` 
 - [X] Update README.md
-- [ ] Update to OOD architecture, with `search` and `replace` contained within a `Cereal` object that stores serial data
+- [ ] `search` and `replace` contained within a `Cereal` object that stores serial data
 - [ ] Add support for multiple documents at once
 - [ ] Add project parser to automatically insert supported file types
 
