@@ -18,8 +18,7 @@
   <p align="center">
     Created by: Michael Montanaro
     <br />
-    <a href="https://github.com/montymi/SerialPy">View Demo</a>
-    ·
+    <br />
     <a href="https://github.com/montymi/SerialPy/issues">Report Bug</a>
     ·
     <a href="https://github.com/montymi/SerialPy/issues">Request Feature</a>
