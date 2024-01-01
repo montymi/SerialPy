@@ -50,8 +50,6 @@
 
 *SerialPy* is a Python package designed to streamline search and replace operations on common data formats: [yaml](https://yaml.org/), [toml](https://toml.io/en/), and [json](https://www.json.org/json-en.html). 
 Built to use with additional shell scripting to semi-automate workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. 
-Whether you are working through the command line or integrating it into your Python projects, *Serialpy* simplifies the process of finding and replacing specific patterns within your data. 
-
 Features include `search` and `replace`, allowing for precise control of serial data. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
