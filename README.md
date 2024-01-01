@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">SerialPy - Serial Data Manipulation Tool</h2>
+  <h2 align="center">SerialPy - Precision Data Format Manager</h2>
 
   <p align="center">
     Created by: Michael Montanaro
