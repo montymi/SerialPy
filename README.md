@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">SerialPy - A Markdown Language Parser</h2>
+  <h2 align="center">SerialPy - Serial Data Manipulation Tool</h2>
 
   <p align="center">
     Created by: Michael Montanaro
@@ -48,7 +48,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-*SerialPy* is a versatile Python package designed for efficient search and replace operations on serial data. Whether you are working through the command line or integrating it into your Python projects, *SerialPy* simplifies the process of finding and replacing specific patterns within your data.serialpy is a versatile Python package designed to streamline search and replace operations on serial data. This powerful tool is crafted to enhance workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. Whether you are working through the command line or integrating it into your Python projects, serialpy simplifies the process of finding and replacing specific patterns within your data. Its key features include efficient search and replace functionality, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
+*SerialPy* is a versatile Python package designed to streamline search and replace operations on serial data. This powerful tool is crafted to enhance workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. Whether you are working through the command line or integrating it into your Python projects, serialpy simplifies the process of finding and replacing specific patterns within your data. 
+
+Its key features include efficient `search` and `replace` functionality, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
