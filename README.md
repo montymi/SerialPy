@@ -61,7 +61,8 @@ Its key features include efficient `search` and `replace` functionality, allowin
 
 ### Installation
 
-Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi using `pip install -i https://test.pypi.org/simple/ SerialPy`
+Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi using:
+`pip install -i https://test.pypi.org/simple/ SerialPy`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
