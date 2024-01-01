@@ -13,19 +13,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">DataGrep - A Markdown Language Parser</h2>
+  <h2 align="center">SerialPy - A Markdown Language Parser</h2>
 
   <p align="center">
     Created by: Michael Montanaro
     <br />
-    <a href="https://github.com/montymi/DataGrep"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/montymi/DataGrep">View Demo</a>
+    <a href="https://github.com/montymi/SerialPy">View Demo</a>
     ·
-    <a href="https://github.com/montymi/DataGrep/issues">Report Bug</a>
+    <a href="https://github.com/montymi/SerialPy/issues">Report Bug</a>
     ·
-    <a href="https://github.com/montymi/DataGrep/issues">Request Feature</a>
+    <a href="https://github.com/montymi/SerialPy/issues">Request Feature</a>
   </p>
 </div>
 
@@ -38,7 +35,6 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#structure">Structure</a></li>
     <li><a href="#tasks">Tasks</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -47,56 +43,69 @@
   </ol>
 </details>
 
+
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-DataGrep is a Python package that provides a grep-like interface within your python script to more efficiently parse various markdown languages such as yaml, json, and dictionaries. 
+*SerialPy* is a versatile Python package designed for efficient search and replace operations on serial data. Whether you are working through the command line or integrating it into your Python projects, *SerialPy* simplifies the process of finding and replacing specific patterns within your data.serialpy is a versatile Python package designed to streamline search and replace operations on serial data. This powerful tool is crafted to enhance workflows involving OpenAPI and Swagger files, making it ideal for companies aiming to maintain consistency within their specification sheets. Whether you are working through the command line or integrating it into your Python projects, serialpy simplifies the process of finding and replacing specific patterns within your data. Its key features include efficient search and replace functionality, allowing for partial automation of the monotonous task of updating specification files. *SerialPy* empowers users to ensure accuracy and reliability, making it an invaluable tool for specification sheet maintenance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 ### Installation
-Simply run `pip install datagrep`
+
+Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi using `pip install -i https://test.pypi.org/simple/ SerialPy`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+Serialpy supports the `-h` flag at the main and all subcommands so more details can be found there.
 
-Import the module at the top of your python script
+### Command-Line Interface (CLI)
+Search for any key within the data in the given file path that is "test" and return a list of values associated with the key.
 ```
-import datagrep
+serialpy search path/to/file "test" --find="key" --ret="value"
+```
+Replace any instance of "test" from the data in the given file path to "replaced" and return True if successfully written back to the file.
+```
+serialpy replace path/to/file "test" "replaced"
+```
+
+### Library
+Import the module at the top of your python script.
+The following snippet of code checks all values from "path/to/file" for "5" and returns all keys associated with the found values. 
+The next line checks to see if the replace function successfully replaced all instances of "5" in "path/to/file" with "6".
+```
+from serialpy import search, replace
+
+found = search.values("path/to/file", "5", "keys") # add False as last argument to disable console printing
+if (replace.all("path/to/file", "5", "6"):
+  # code to run after successfully replacing 5 with 6
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- STRUCTURE -->
-## Structure
 
-As stated above, less than 6% of GitHub projects include documentation or diagrams about the software's architecture. Since larger projects can often have a very convoluted source code structure, diagrams are the ideal method of displaying the flow of the project. 
-
-*Here is an example given by the official [PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML) GitHub page which utilizes both graphical and verbal descriptions to portray the workflow of a web application.*
-<div align="center"><img width="830" alt="Example software architecture drawn via PlantUML" src="https://user-images.githubusercontent.com/84359773/201444996-30331b8e-69c2-4440-bf0b-a79610282772.png"></div>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- TASKS -->
 ## Tasks
 
-By publicly displaying the to-do list of the project, users are able to see any feature that is nearing implementation. The list also allows new developers to quickly find potential tasks for them to complete which is an ideal way to familiarize them with the source code and to continue to make commits.
+- [X] Add `replace` feature
+- [X] Add support for `.toml` 
+- [X] Update README.md
+- [ ] Update to OOD architecture, with `search` and `replace` contained within a `Cereal` object that stores serial data
+- [ ] Add support for multiple documents at once
+- [ ] Add project parser to automatically insert supported file types
 
-- [X] Emphasize 5.4% of projects section (speculation about what the observable differences would be if it were a higher figure)
-- [X] Fix "Built With" logos section
-- [X] Revision at the sentence level
-- [X] Center architecture image
-- [X] Add Author's Note
-- [X] Fix some links
-- [ ] Add beginner project to repository
-- [ ] Change code examples to be example project
-
-See the [open issues](https://github.com/montymi/DataGrep/issues) for a full list of issues and proposed features.
+See the [open issues](https://github.com/montymi/SerialPy/issues) for a full list of issues and proposed features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,12 +114,10 @@ See the [open issues](https://github.com/montymi/DataGrep/issues) for a full lis
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are, in my opinion, the greatest part of OSS and are what will be the key to continuing the growth of the community. One of the main goals of this README is to facilitate contributions of potential developers. In this section, developers must be sure to lay out any coding styling choices that they may have so that the source code can remain as uniform as possible. One such project that has an immpressive contributions page is *htop* by [htop-dev](https://github.com/htop-dev/htop) who point all potential incoming contributors to their [style guide](https://github.com/htop-dev/htop/blob/main/docs/styleguide.md)
-
 1. [Fork the Project](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature/Update Branch (`git checkout -b feature/NewFeature` or `git checkout -b update/Feature`)
+3. Commit your Changes (`git commit -m 'Add some Feature'`)
+4. Push to the Branch (`git push origin feature/NewFeature` or `git push origin update/Feature`)
 5. [Open a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -120,9 +127,7 @@ Contributions are, in my opinion, the greatest part of OSS and are what will be 
 <!-- LICENSE -->
 ## License
 
-*Documentation must include a license section in which the type of license and a link or reference to the full license in the repository is given.*
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,9 +136,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Michael Montanaro - [LinkedIn](https://www.linkedin.com/in/michael-montanaro/) - montanaro.m@northeastern.edu
+Michael Montanaro - [LinkedIn](https://www.linkedin.com/in/michael-montanaro/) - mcmontanaro01@gmail.com
 
-Project Link: [https://github.com/montymi/DataGrep](https://github.com/montymi/DataGrep)
+Project Link: [https://github.com/montymi/SerialPy](https://github.com/montymi/SerialPy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,14 +147,8 @@ Project Link: [https://github.com/montymi/DataGrep](https://github.com/montymi/D
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list any resources used or that may be helpful in understanding the project
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
+* [OpenAPI/Swagger Testing](https://apitools.dev/swagger-cli/)
+* [Publishing to PyPi Tutorial](https://realpython.com/pypi-publish-python-package/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,16 +156,16 @@ Use this space to list any resources used or that may be helpful in understandin
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/montymi/DataGrep.svg?style=for-the-badge
-[contributors-url]: https://github.com/montymi/DataGrep/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/montymi/DataGrep.svg?style=for-the-badge
-[forks-url]: https://github.com/montymi/DataGrep/network/members
-[stars-shield]: https://img.shields.io/github/stars/montymi/DataGrep.svg?style=for-the-badge
-[stars-url]: https://github.com/montymi/DataGrep/stargazers
-[issues-shield]: https://img.shields.io/github/issues/montymi/DataGrep.svg?style=for-the-badge
-[issues-url]: https://github.com/montymi/DataGrep/issues
-[license-shield]: https://img.shields.io/github/license/montymi/DataGrep.svg?style=for-the-badge
-[license-url]: https://github.com/montymi/DataGrep/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/montymi/SerialPy.svg?style=for-the-badge
+[contributors-url]: https://github.com/montymi/SerialPy/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/montymi/SerialPy.svg?style=for-the-badge
+[forks-url]: https://github.com/montymi/SerialPy/network/members
+[stars-shield]: https://img.shields.io/github/stars/montymi/SerialPy.svg?style=for-the-badge
+[stars-url]: https://github.com/montymi/SerialPy/stargazers
+[issues-shield]: https://img.shields.io/github/issues/montymi/SerialPy.svg?style=for-the-badge
+[issues-url]: https://github.com/montymi/SerialPy/issues
+[license-shield]: https://img.shields.io/github/license/montymi/SerialPy.svg?style=for-the-badge
+[license-url]: https://github.com/montymi/SerialPy/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/michael-montanaro
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
