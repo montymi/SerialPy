@@ -134,7 +134,7 @@ See the [open issues](https://github.com/montymi/SerialPy/issues) for a full lis
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPL-3.0 License. See [`LICENSE.txt`](./License.txt) for more information.
+Distributed under the GPL-3.0 License. See [`LICENSE.txt`](https://github.com/montymi/SerialPy/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
