@@ -17,8 +17,7 @@
 
   <p align="center">
     Precision Data Format Manager
-    <br />
-    <br />
+    ·
     <a href="https://github.com/montymi/SerialPy/issues">Report Bug</a>
     ·
     <a href="https://github.com/montymi/SerialPy/issues">Request Feature</a>
