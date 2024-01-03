@@ -86,9 +86,9 @@ serialpy replace path/to/file "var1" "var2"
 ### Library
 Import the module at the top of your python script.
 
-The following snippet of code checks all values from "path/to/file" for "5" and returns all keys associated with the found values. 
+The following snippet of code runs `search` on all *values* in `"path/to/file"` for 5 and returns all *keys* associated with the value, 5. 
 
-The next line checks to see if the replace function successfully replaced all instances of "5" in "path/to/file" with "6".
+The next line checks to see if the `replace` function successfully converted all instances of 5 in `"path/to/file"` with 6 and wrote the changes back into the file.
 ```
 from serialpy import search, replace
 
