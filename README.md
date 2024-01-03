@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">SerialPy - Precision Data Format Manager</h2>
+  <h2 align="center">SerialPy 0.1.0 - Precision Data Format Manager</h2>
 
   <p align="center">
     Created by: Michael Montanaro
