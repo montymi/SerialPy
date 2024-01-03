@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h2 align="center">SerialPy 0.1.0</h2>
+  <h1 align="center">SerialPy 0.1.0</h1>
 
   <p align="center">
     Precision Data Format Manager
