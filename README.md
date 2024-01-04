@@ -58,10 +58,9 @@ Features include `search` and `replace`, allowing for precise control of serial 
 ## Getting Started
 
 ### Installation
-
-Registration for PyPi is currently disabled, but it can be downloaded from TestPyPi: 
+Simply run:
 ```
-pip install -i https://test.pypi.org/simple/ SerialPy
+pip install SerialPy
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
