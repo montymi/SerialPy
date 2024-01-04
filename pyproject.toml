@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "SerialPy"
-version = "1.0.1"
+version = "0.1.0"
 description = "A tool for working with serialized data"
 readme = "README.md"
 authors = [{ name = "Michael Montanaro", email = "mcmontanaro01@gmail.com" }]
