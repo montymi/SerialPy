@@ -103,7 +103,8 @@ if (replace.all("path/to/file", "5", "6"):
 ## Tasks
 
 - [X] Add `replace` feature
-- [X] Add support for `.toml` 
+- [X] Add support for `.toml`
+- [ ] Check for `tomllib` upon install **  
 - [X] Update README.md
 - [ ] `search` and `replace` contained within a `Cereal` object that stores serial data
 - [ ] Add support for multiple documents at once
