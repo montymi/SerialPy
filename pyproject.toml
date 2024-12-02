@@ -6,8 +6,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "SerialPy"
-version = "0.1.0"
-description = "A tool for working with serialized data"
+version = "1.0.0"
+description = "A tool for working with serialized data, either inline or using CLI."
 readme = "README.md"
 authors = [{ name = "Michael Montanaro", email = "mcmontanaro01@gmail.com" }]
 license = { file = "LICENSE.txt" }
@@ -16,9 +16,10 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["serialization", "yaml", "json", "toml", "dictionary", "search", "replace", "serial", "data", "OpenAPI", "API", "api", "Config", "Configuration"]
+keywords = ["serialization", "yaml", "json", "toml", "dictionary", "search", "replace", "serial", "data", "OpenAPI", "API", "api", "Config", "Configuration", "Swagger" ]
 dependencies = [
     "PyYAML >=5.0",
+    "tomli >=2.0.0; python_version < '3.11'", # For older Python versions
 ]
 requires-python = ">=3.9"
 
@@ -26,7 +27,7 @@ requires-python = ">=3.9"
 dev = ["pytest"]
 
 [project.urls]
-Homepage = "https://github.com/montymi/serialpy"
+Homepage = "https://github.com/montymi/SerialPy"
 
 [project.scripts]
 serialpy = "serialpy.__main__:main"
